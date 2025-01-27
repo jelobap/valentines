@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+
+    <h1>Will you be my Valentine?</h1>
+
+    <button onclick="respondYes()" aria-label="Respond with Yes">Yes</button>
+    <button onclick="respondNo()" aria-label="Respond with No">No</button>
+
+    <p id="responseMessage"></p>
+
+    <div id="videoContainer">
+        <iframe id="videoIframe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        function respondYes() {
+            document.getElementById("responseMessage").innerHTML = "Yay! You're my Valentine! ❤️ 😊";
+            document.getElementById("videoIframe").src = "https://www.youtube.com/embed/kPa7bsKwL-c?si=K_dAYFyDebW2Kkkf"; // Set the 'Yes' video
+            document.getElementById("videoContainer").style.display = "block"; // Show the video
+        }
+
+        function respondNo() {
+            document.getElementById("responseMessage").innerHTML = "Aww, maybe next time! 😢 🎤";
+            document.getElementById("videoIframe").src = "https://www.youtube.com/embed/AtPrjYp75uA?si=gvJOLMDrs947Jsae"; // Set the 'No' video
+            document.getElementById("videoContainer").style.display = "block"; // Show the video
+        }
+    </script>
+
+</body>
+</html>
